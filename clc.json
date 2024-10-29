@@ -1,0 +1,45 @@
+{
+  "categoryName": "PersonList",
+  "people": [
+    {
+      "firstName": "Lucas",
+      "lastName": "Martin"
+    },
+    {
+      "firstName": "Emma",
+      "lastName": "Dupont"
+    },
+    {
+      "firstName": "Noah",
+      "lastName": "Leroy"
+    },
+    {
+      "firstName": "Chloe",
+      "lastName": "Moreau"
+    },
+    {
+      "firstName": "Liam",
+      "lastName": "Bernard"
+    },
+    {
+      "firstName": "Olivia",
+      "lastName": "Roux"
+    },
+    {
+      "firstName": "Ethan",
+      "lastName": "Simon"
+    },
+    {
+      "firstName": "Sophia",
+      "lastName": "Lambert"
+    },
+    {
+      "firstName": "Mason",
+      "lastName": "Garcia"
+    },
+    {
+      "firstName": "Ava",
+      "lastName": "Petit"
+    }
+  ]
+}
