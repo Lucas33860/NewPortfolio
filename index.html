@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon/" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Portfolio de Lucas JUILLAT votre futur développeur web."
+    />
+    <title>Portfolio Lucas Juillat</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/button.css" />
+    <link rel="stylesheet" href="/styles/banner.css" />
+  </head>
+  <body id="site-body">
+    <section id="accueil" class="container home">
+      <div class="container">
+        <div class="video-container">
+          <video autoplay loop muted playsinline>
+            <source src="/video/Background.mp4" type="video/mp4" />
+            Votre navigateur ne supporte pas la vidéo.
+          </video>
+        </div>
+
+        <header>
+          <nav>
+            <ul>
+              <li><a href="#accueil">Accueil</a></li>
+              <li><a href="#competences">Compétences</a></li>
+              <li><a href="#projets">Projets</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="banner">
+          <div class="scrolling-text">
+            <div class="skills">
+              <div class="skill">
+                <img src="/images/html-5.png" alt="HTML" /> HTML
+              </div>
+              <div class="skill">
+                <img src="/images/css-3.png" alt="CSS" /> CSS
+              </div>
+              <div class="skill">
+                <img src="/images/javascriptpicto.png" alt="JavaScript" /> JavaScript
+              </div>
+              <div class="skill">
+                <img src="/images/GSAP picto.webp" alt="React" /> GSAP
+              </div>
+              <div class="skill">
+                <img src="/images/node picto.svg" alt="Node.js" /> Node.js
+              </div>
+              <div class="skill">
+                <img src="/images/vue js picto.png" alt="Express" /> Vue Js
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal({ reset: true });
+      ScrollReveal().reveal("header", { duration: 2000 });
+    </script>
+  </body>
+</html>

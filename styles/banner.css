@@ -1,0 +1,64 @@
+.banner {
+  width: 110%;
+  background-color: black;
+  color: white;
+  padding: 15px 0;
+  overflow: hidden;
+  transform: rotate(-5deg);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 100px;
+  left: -5%;
+}
+
+.scrolling-text {
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+}
+
+.skills {
+  display: flex;
+  gap: 4rem;
+  animation: scroll-left-to-right 15s linear infinite;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.skill img {
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes scroll-left-to-right {
+  from {
+    transform: translateX(-90%);
+  }
+  to {
+    transform: translateX(290%);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    gap: 1.5rem;
+    animation-duration: 10s;
+  }
+
+  .skill {
+    font-size: 1rem;
+  }
+
+  .skill img {
+    width: 25px;
+    height: 25px;
+  }
+}
