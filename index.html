@@ -1,268 +1,301 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Lucas JUILLAT</title>
   <meta name="description" content="Portfolio de Lucas JUILLAT, étudiant en BUT MMI, passionné par le développement web et à la recherche d'une alternance en développement web pour sa 3ème année." />
-  <meta name="keywords" content="Lucas JUILLAT, Portfolio, développeur front-end, Alternance, BUT MMI, Développement Front-End, Projets Web" />
   <meta name="author" content="Lucas JUILLAT" />
   <meta property="og:title" content="Portfolio Lucas JUILLAT - développeur front-end" />
   <meta property="og:description" content="Découvrez les compétences, projets et parcours de Lucas JUILLAT, étudiant en BUT MMI et passionné par le développement web." />
   <meta property="og:image" content="images/moi.jpg" />
-  <meta property="og:url" content="https://lucasjuillat.fr" />
-  <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Portfolio Lucas JUILLAT - développeur front-end" />
-  <meta name="twitter:description" content="Découvrez les compétences, projets et parcours de Lucas JUILLAT, étudiant en BUT MMI et passionné par le développement web." />
-  <meta name="twitter:image" content="images/moi.jpg" />
-  <link rel="icon" href="images/moi.jpg" type="image/jpeg" />
-  <title>Portfolio Lucas JUILLAT - développeur front-end</title>
-  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="icon" href="images/moi.jpg" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles/style.css" />
-  <link rel="stylesheet" href="styles/button.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <script src="script/script.js" defer></script>
 </head>
 <body>
-  <div id="mySidenav" class="sidenav">
-    <a id="closeBtn" href="#" class="close">&times;</a>
-    <ul>
-      <li><a href="#" class="sidenav-link">Accueil</a></li>
-      <li><a href="#competences" class="sidenav-link">Compétences</a></li>
-      <li><a href="#projets" class="sidenav-link">Projets</a></li>
-      <li><a href="#contact" class="sidenav-link">Contact</a></li>
-    </ul>
+  <div class="site">
+    <header class="main-header">
+      <div class="brand">
+        <img src="images/moi.jpg" alt="Photo de Lucas JUILLAT">
+        <div>
+          <h1>Lucas JUILLAT</h1>
+          <p>Étudiant BUT MMI · Développeur front-end</p>
+        </div>
+      </div>
+
+      <nav class="primary" aria-label="Navigation principale">
+        <a href="#accueil" class="active">Accueil</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+        <a href="images/CV Lucas JUILLAT.pdf" download class="btn outline">Télécharger CV</a>
+      </nav>
+
+      <button class="hamburger" id="openMenu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </header>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" style="display:none;margin-bottom:1rem;">
+      <div class="card" style="display:flex;flex-direction:column;gap:.5rem;">
+        <a href="#accueil">Accueil</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <main>
+      <section id="accueil" class="hero">
+        <div class="hero-card">
+          <h2>Bonjour, je suis <strong>Lucas</strong></h2>
+          <p class="lead">Votre futur développeur front-end — étudiant en BUT MMI et en alternance comme Webmaster. Passionné par le web, la création numérique et les interfaces propres et accessibles.</p>
+
+          <div class="cta-row">
+            <button class="btn" id="contactMe">Me contacter</button>
+            <a class="btn outline" href="#projets">Voir mes projets</a>
+          </div>
+
+          <hr style="margin:1rem 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+          <div style="display:flex;gap:1rem;align-items:center">
+            <div style="flex:1">
+              <strong>Compétences clés</strong>
+              <div class="muted">HTML · CSS · JavaScript · React · PHP · WordPress · Git</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="profile">
+          <img src="images/moi.jpg" alt="Photo de Lucas JUILLAT" />
+          <div style="text-align:center">
+            <h4 style="margin:.25rem 0">Lucas JUILLAT</h4>
+            <small class="muted">Développeur Front-End · Webmaster</small>
+          </div>
+          <div style="margin-top:.5rem;display:flex;gap:.5rem">
+            <a href="mailto:juillat.lucas@gmail.com" class="btn outline">Contact</a>
+            <a href="images/CV Lucas JUILLAT.pdf" download class="btn">CV</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="competences">
+        <div class="section-title">
+          <h3>Compétences</h3>
+          <div class="muted">Animateur de compétences</div>
+        </div>
+        <div class="card skills">
+          <div class="skills-track" id="skillsTrack" aria-hidden="true">
+            <span class="skill"><i class="fab fa-html5"></i> HTML</span>
+            <span class="skill"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="skill"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="skill"><i class="fab fa-php"></i> PHP</span>
+            <span class="skill"><i class="fab fa-wordpress"></i> WordPress</span>
+            <span class="skill"><i class="fab fa-react"></i> React</span>
+            <span class="skill"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill"><i class="fas fa-database"></i> SQL</span>
+            <span class="skill"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="skill"><i class="fas fa-play"></i> GSAP</span>
+            <span class="skill"><i class="fab fa-vuejs"></i> Vue.js</span>
+            <span class="skill"><i class="fab fa-angular"></i> Angular</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projets">
+        <div class="section-title">
+          <h3>Projets</h3>
+          <div class="muted">Sélection de travaux réalisés</div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project template preserved content -->
+          <article class="project-card" data-title="Etellio - Workshop" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front" style="background-image:url('images/Etellio.jpg')">
+                <div class="overlay">
+                  <h4>Etellio - Workshop</h4>
+                  <p class="muted">Parcours IVG</p>
+                  <div class="tags"><span class="tag">Dev Front</span></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>Projet parlant de l'IVG grâce à notre site réalisé à partir d'Osuny. Vous allez découvrir les parcours de soins de l'IVG ainsi que de nombreux témoignages de femmes.</p>
+                <div style="margin-top:1rem">
+                  <a class="btn" href="https://etellio.mmibordeaux.com" target="_blank" rel="noopener">Visiter le site</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-title="Enquête au Musba" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front" style="background-image:url('images/MUSBA.png')">
+                <div class="overlay">
+                  <h4>Enquête au Musba</h4>
+                  <p class="muted">Jeu Bacchanight</p>
+                  <div class="tags"><span class="tag">Dev Front</span></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>Jeu d'enquête pour la 10ème édition de la Bacchanight au MUSBA. Dans ce jeu, vous allez devoir aider le musée à retrouver des morceaux de certaines œuvres qui ont été volés afin de redonner leur splendeur à ces dernières.</p>
+                <div style="margin-top:1rem">
+                    <a class="btn" href="https://enqueteaumusba.netlify.app" target="_blank" rel="noopener">Visiter le site</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-title="À TRAVERS LEURS YEUX" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front" style="background-image:url('images/webdoc.jpg')">
+                <div class="overlay">
+                  <h4>À TRAVERS LEURS YEUX</h4>
+                  <p class="muted">Webdoc maltraitance animale</p>
+                  <div class="tags"><span class="tag">Dev Front</span></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>Webdoc sur la maltraitance animale avec de nombreuses vidéos qui parlent de ces maltraitances et de leurs conséquences avec des professionnels.</p>
+                <div style="margin-top:1rem">
+                  <a class="btn" href="https://webdocmaltraitanceanimal.osc-fr1.scalingo.io/" target="_blank" rel="noopener">Visiter le site</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-title="LOL API Items" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front" style="background-image:url('images/lolapi.jpg')">
+                <div class="overlay">
+                  <h4>LOL API Items</h4>
+                  <p class="muted">Data Journalisme</p>
+                  <div class="tags"><span class="tag">Dev</span><span class="tag">API Scraping</span></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>Projet durant lequel nous avons décidé de parler du jeu LOL. Grâce à son API, nous avons récupéré les attributs des objets et personnages afin d'en faire des statistiques sous forme de graphiques.</p>
+                <div style="margin-top:1rem">
+                    <a class="btn" href="https://lolapiitems.netlify.app" target="_blank" rel="noopener">Visiter le site</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-title="Tetri" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front" style="background-image:url('images/Tetri.jpg')">
+                <div class="overlay">
+                  <h4>Tetri</h4>
+                  <p class="muted">Jeu tri des déchets</p>
+                  <div class="tags"><span class="tag">Dev JS</span></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>Développement d'un jeu en JS afin de sensibiliser les gens au tri des déchets. Dans notre jeu, vous allez avoir, à la manière de TETRIS, des objets qui tombent de manière aléatoire qu'il faudra mettre dans la bonne poubelle avec une difficulté qui augmente.</p>
+                <div style="margin-top:1rem">
+                    <a class="btn" href="https://tetrimmi.netlify.app" target="_blank" rel="noopener">Visiter le site</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-title="BlogArt" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front" style="background-image:url('images/blogart.jpg')">
+                <div class="overlay">
+                  <h4>BlogArt</h4>
+                  <p class="muted">Blog d'articles</p>
+                  <div class="tags"><span class="tag">Dev Front-Back</span></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>Création d'un blog d'articles en PHP et MySQL afin de découvrir le développement back-end et de pouvoir gérer et publier nos articles depuis un menu admin grâce à un compte administrateur.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-title="Site Musée" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front" style="background-image:url('images/Musée.png')">
+                <div class="overlay">
+                  <h4>Site Musée</h4>
+                  <p class="muted">Refonte du site du Musée d'Aquitaine</p>
+                  <div class="tags"><span class="tag">Dev HTML CSS JS</span><span class="tag">Créa</span></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>Refonte du site du Musée d'Aquitaine afin d'acquérir nos premières compétences et bases en HTML, CSS et JS ainsi que le responsive.</p>
+                <div style="margin-top:1rem">
+                    <a class="btn" href="https://refonte-musee.netlify.app" target="_blank" rel="noopener">Visiter le site</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-title="Chat CPT - Reboot 2023" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front" style="background-image:url('/images/reboot.jpg')">
+                <div class="overlay">
+                  <h4>Chat CPT - Reboot 2023</h4>
+                  <p class="muted">Chatbot sensibilisation à l'IA</p>
+                  <div class="tags"><span class="tag">Dev JS JSON</span><span class="tag">Créa</span></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>Un faux chatbot pour sensibiliser à la pollution numérique causée par la mauvaise utilisation de l'IA. Nous avons remporté grâce à ce site le prix du Numérique Responsable pour ce Reboot.</p>
+                <div style="margin-top:1rem">
+                    <a class="btn" href="https://chatcpt.netlify.app" target="_blank" rel="noopener">Visiter le site</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-title="Cultu'Race" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front" style="background-image:url('images/culturace.jpg')">
+                <div class="overlay">
+                  <h4>Cultu'Race</h4>
+                  <p class="muted">Jeu interculturalité</p>
+                  <div class="tags"><span class="tag">Dev Front-Back</span></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>Jeu de culture inspiré de WikiRace dans lequel le but est de découvrir l'interculturalité à travers des pages web. Vous partirez d'un mot "Cinéma" et devrez finir par trouver le mot "Tuk-Tuk".</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-title"><h3>Contact</h3><div class="muted">Entrons en contact</div></div>
+        <div class="contact-grid">
+          <div class="card contact-card">
+            <p>Email : <a href="mailto:juillat.lucas@gmail.com">juillat.lucas@gmail.com</a></p>
+            <p>Téléphone : <a href="tel:+33608915328">+33 6 08 91 53 28</a></p>
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:1rem 0" />
+            <p class="muted">Téléchargez mon CV ou contactez-moi directement par email.</p>
+          </div>
+
+          <div class="card center">
+            <img src="images/moi.jpg" alt="Photo de Lucas" style="width:100px;height:100px;border-radius:12px;object-fit:cover;margin-bottom:.5rem">
+            <div><a class="btn" href="images/CV Lucas JUILLAT.pdf" download>Télécharger mon CV</a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>© Lucas JUILLAT - 2025</small>
+    </footer>
   </div>
-  <a href="#" id="openBtn">
-    <span class="burger-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </span>
-  </a>
-  <header class="fade-in">
-    <h1>Bonjour, je suis Lucas JUILLAT</h1>
-    <img src="images/moi.jpg" alt="Photo de Lucas JUILLAT, développeur front-end" class="profile-photo" />
-    <h2>Votre futur développeur front-end</h2>
-    <p>Étudiant en BUT MMI en alternance en tant que Webmaster</p>
-  </header>
-
-  <section class="about fade-in">
-    <h2>À propos de moi</h2>
-    <p>
-      Actuellement en 2ème année de BUT Métiers du Multimédia et de l'Internet, je suis passionné par le développement web et la création numérique. J'aime apprendre de nouvelles technologies et relever des défis créatifs. Je souhaite me spécialiser dans le développement front-end. 
-    </p>
-  </section>
-
-  <section class="skills-carousel fade-in" id="competences">
-    <h2>Compétences</h2>
-    <div class="skills-track">
-      <span class="skill"><i class="fab fa-html5"></i> HTML</span>
-      <span class="skill"><i class="fab fa-css3-alt"></i> CSS</span>
-      <span class="skill"><i class="fab fa-js"></i> JavaScript</span>
-      <span class="skill"><i class="fab fa-php"></i> PHP</span>
-      <span class="skill"><i class="fab fa-wordpress"></i> WordPress</span>
-      <span class="skill"><i class="fab fa-react"></i> React</span>
-      <span class="skill"><i class="fab fa-git-alt"></i> Git</span>
-      <span class="skill"><i class="fas fa-database"></i> SQL</span>
-      <span class="skill"><i class="fab fa-node-js"></i> Node.js</span>
-      <span class="skill"><i class="fas fa-play"></i> GSAP</span>
-      <span class="skill"><i class="fab fa-vuejs"></i> Vue.js</span>
-      <span class="skill"><i class="fab fa-angular"></i> Angular</span>
-    </div>
-  </section>
-
-  <section class="projects fade-in" id="projets">
-    <h2>Mes projets</h2>
-    <div class="projects-container">
-      <div class="project">
-        <div class="project-card">
-          <div class="project-front" style="background-image: url('images/Etellio.jpg');">
-            <div class="project-info">
-              <h3>Etellio - Workshop</h3>
-              <p>Parcours IVG</p>
-              <div class="project-tags">
-                <span class="tag">Dev Front</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-back">
-            <p>Projet parlant de l'IVG grâce à notre site réalisé à partir d'Osuny. Vous allez découvrir les parcours de soins de l'IVG ainsi que de nombreux témoignages de femmes.</p>
-            <button class="visit-site-btn" onclick="window.open('https://etellio.mmibordeaux.com', '_blank')">Visiter le site</button>
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-card">
-          <div class="project-front" style="background-image: url('images/MUSBA.png');">
-            <div class="project-info">
-              <h3>Enquête au Musba</h3>
-              <p>Jeu Bacchanight</p>
-              <div class="project-tags">
-                <span class="tag">Dev Front</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-back">
-            <p>Jeu d'enquête pour la 10ème édition de la Bacchanight au MUSBA. Dans ce jeu, vous allez devoir aider le musée à retrouver des morceaux de certaines œuvres qui ont été volés afin de redonner leur splendeur à ces dernières.</p>
-            <button class="visit-site-btn" onclick="window.open('https://enqueteaumusba.netlify.app', '_blank')">Visiter le site</button>
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-card">
-          <div class="project-front" style="background-image: url('images/webdoc.jpg');">
-            <div class="project-info">
-              <h3>À TRAVERS LEURS YEUX</h3>
-              <p>Webdoc maltraitance animale</p>
-              <div class="project-tags">
-                <span class="tag">Dev Front</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-back">
-            <p>Webdoc sur la maltraitance animale avec de nombreuses vidéos qui parlent de ces maltraitances et de leurs conséquences avec des professionnels.</p>
-            <button class="visit-site-btn" onclick="window.open('https://webdocmaltraitanceanimal.osc-fr1.scalingo.io/', '_blank')">Visiter le site</button>
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-card">
-          <div class="project-front" style="background-image: url('images/lolapi.jpg');">
-            <div class="project-info">
-              <h3>LOL API Items</h3>
-              <p>Data Journalisme</p>
-              <div class="project-tags">
-                <span class="tag">Dev</span>
-                <span class="tag">API Scraping</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-back">
-            <p>Projet durant lequel nous avons décidé de parler du jeu LOL. Grâce à son API, nous avons récupéré les attributs des objets et personnages afin d'en faire des statistiques sous forme de graphiques.</p>
-            <button class="visit-site-btn" onclick="window.open('https://lolapiitems.netlify.app', '_blank')">Visiter le site</button>
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-card">
-          <div class="project-front" style="background-image: url('images/Tetri.jpg');">
-            <div class="project-info">
-              <h3>Tetri</h3>
-              <p>Jeu tri des déchets</p>
-              <div class="project-tags">
-                <span class="tag">Dev JS</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-back">
-            <p>Développement d'un jeu en JS afin de sensibiliser les gens au tri des déchets. Dans notre jeu, vous allez avoir, à la manière de TETRIS, des objets qui tombent de manière aléatoire qu'il faudra mettre dans la bonne poubelle avec une difficulté qui augmente.</p>
-            <button onclick="window.open('https://tetrimmi.netlify.app', '_blank')" class="visit-site-btn">Visiter le site</button>
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-card">
-          <div class="project-front" style="background-image: url('images/blogart.jpg');">
-            <div class="project-info">
-              <h3>BlogArt</h3>
-              <p>Blog d'articles</p>
-              <div class="project-tags">
-                <span class="tag">Dev Front-Back</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-back">
-            <p>Création d'un blog d'articles en PHP et MySQL afin de découvrir le développement back-end et de pouvoir gérer et publier nos articles depuis un menu admin grâce à un compte administrateur.</p>
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-card">
-          <div class="project-front" style="background-image: url('images/Musée.png');">
-            <div class="project-info">
-              <h3>Site Musée</h3>
-              <p>Refonte du site du Musée d'Aquitaine</p>
-              <div class="project-tags">
-                <span class="tag">Dev HTML CSS JS</span>
-                <span class="tag">Créa</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-back">
-            <p>Refonte du site du Musée d'Aquitaine afin d'acquérir nos premières compétences et bases en HTML, CSS et JS ainsi que le responsive.</p>
-            <button onclick="window.open('https://refonte-musee.netlify.app', '_blank')" class="visit-site-btn">Visiter le site</button>
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-card">
-          <div class="project-front" style="background-image: url('/images/reboot.jpg');">
-            <div class="project-info">
-              <h3>Chat CPT - Reboot 2023</h3>
-              <p>Chatbot sensibilisation à l'IA</p>
-              <div class="project-tags">
-                <span class="tag">Dev JS JSON</span>
-                <span class="tag">Créa</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-back">
-            <p>Un faux chatbot pour sensibiliser à la pollution numérique causée par la mauvaise utilisation de l'IA. Nous avons remporté grâce à ce site le prix du Numérique Responsable pour ce Reboot.</p>
-            <button onclick="window.open('https://chatcpt.netlify.app', '_blank')" class="visit-site-btn">Visiter le site</button>
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-card">
-          <div class="project-front" style="background-image: url('images/culturace.jpg');">
-            <div class="project-info">
-              <h3>Cultu'Race</h3>
-              <p>Jeu interculturalité</p>
-              <div class="project-tags">
-                <span class="tag">Dev Front-Back</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-back">
-            <p>Jeu de culture inspiré de WikiRace dans lequel le but est de découvrir l'interculturalité à travers des pages web. Vous partirez d'un mot "Cinéma" et devrez finir par trouver le mot "Tuk-Tuk".</p>
-          </div>
-        </div>
-      </div>
-      <div class="project" style="display:none">
-        <div class="project-card">
-          <div class="project-front" style="background-image: url('images/scratch.png');">
-            <div class="project-info">
-              <h3>Projet Scratch</h3>
-              <p>Développement d'un jeu Scratch</p>
-              <div class="project-tags">
-                <span class="tag">Dev</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-back">
-            <p>Petit jeu Scratch pour découvrir les bases des algorithmes. Dans ce jeu, nous allons mener une enquête pour trouver qui est le coupable d'un vol !</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="show-more-btn" onclick="showMoreProjects()">Voir plus</button>
-
-  <section class="fade-in" id="contact">
-    <h2>Contact</h2>
-    <div class="contact-info">
-      <p>Email : <a href="mailto:juillat.lucas@gmail.com">juillat.lucas@gmail.com</a></p>
-      <p>Téléphone : <a href="tel:+33608915328">+33 6 08 91 53 28</a></p>
-      <a class="btn-cv" href="images/CV Lucas JUILLAT.pdf" download>Télécharger mon CV</a>
-    </div>
-  </section>
-
-  <footer class="fade-in">
-    <p>© Lucas JUILLAT - 2025</p>
-  </footer>
-
-</body>
-</html>
-
 </body>
 </html>
